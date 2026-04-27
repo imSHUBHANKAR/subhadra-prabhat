@@ -120,7 +120,7 @@ import img1 from '../assets/shubh_img1.jpg'
 
 export default function WeddingLanding() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-100 via-pink-50 to-white flex items-center justify-center relative overflow-hidden font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 to-white flex items-center justify-center relative overflow-hidden font-sans">
       
       {/* Google Font */}
       <style>
