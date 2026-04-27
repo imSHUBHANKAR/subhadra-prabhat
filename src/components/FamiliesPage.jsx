@@ -18,7 +18,7 @@ export default function FamiliesPage() {
             वधू पक्ष (Bride's Family)
           </h2>
 
-          <p className="text-lg text-gray-700 mb-4">श्रीमती सुनीता देवी</p>
+          <p className="text-lg text-gray-700 mb-4">श्रीमती ललिता देवी</p>
 
           <p className="text-gray-500 text-xl my-2">&</p>
 
@@ -38,11 +38,11 @@ export default function FamiliesPage() {
             वर पक्ष (Groom's Family)
           </h2>
 
-          <p className="text-lg text-gray-700 mb-4">श्री विनोद कुमार</p>
+          <p className="text-lg text-gray-700 mb-4">श्रीमती प्रमिला देवी</p>
 
           <p className="text-gray-500 text-xl my-2">&</p>
 
-          <p className="text-lg text-gray-700">श्रीमती अनीता देवी</p>
+          <p className="text-lg text-gray-700">श्री रवि शंकर प्रसाद</p>
         </div>
       </div>
     </div>
