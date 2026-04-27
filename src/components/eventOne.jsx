@@ -224,6 +224,7 @@
 
 import React from "react";
 import img1 from "../assets/shubh_img1.jpg";
+import img11 from "../assets/img11.svg";
 
 export default function WeddingLanding() {
   return (
@@ -261,18 +262,28 @@ export default function WeddingLanding() {
       />
 
       {/* 🌸 BOTTOM LEFT (hide on very small screens) */}
-      <img
+      {/* <img
         src={img1}
         className="hidden sm:block absolute bottom-0 left-0 w-40 md:w-60 opacity-80 z-0"
         alt=""
-      />
+      /> */}
 
       {/* 🌸 BOTTOM RIGHT */}
       <img
-        src={img1}
+        src={img11}
         className="hidden sm:block absolute bottom-0 right-0 w-40 md:w-60 opacity-80 z-0"
         alt=""
       />
+      <img
+       src={img11}
+        className="absolute bottom-0 left-0 w-60 opacity-100"
+         alt=""
+       />
+       <img
+       src={img11}
+        className="absolute bottom-0 right-0 w-60 opacity-100"
+         alt=""
+       />
 
       {/* 🌸 SIDE DECOR (only desktop) */}
       <img
