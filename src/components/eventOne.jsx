@@ -63,7 +63,7 @@ export default function WeddingInvitationHero() {
         </h1>
 
         <h2 className="mb-4 text-3xl md:text-6xl font-medium leading-tight">
-          आयुष्मती सुभद्रा कुमारी (गुड़िया)
+          आयुष्मति सुभद्रा कुमारी (गुड़िया)
         </h2>
 
         <p className="mb-6 text-4xl text-[#d4af37] font-serif">&</p>

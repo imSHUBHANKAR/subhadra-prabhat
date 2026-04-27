@@ -15,14 +15,14 @@ export default function FamiliesPage() {
         {/* Bride Card */}
         <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-yellow-600 shadow-lg p-10 text-center">
           <h2 className="text-2xl md:text-3xl font-serif text-[#7a0c1c] mb-6">
-            Bride's Family
+            वधू पक्ष (Bride's Family)
           </h2>
 
-          <p className="text-lg text-gray-700 mb-4">श्री राजेश कुमार</p>
+          <p className="text-lg text-gray-700 mb-4">श्रीमती सुनीता देवी</p>
 
           <p className="text-gray-500 text-xl my-2">&</p>
 
-          <p className="text-lg text-gray-700">श्रीमती सुनीता देवी</p>
+          <p className="text-lg text-gray-700">श्री विनोद कुमार</p>
         </div>
 
         {/* Center Divider */}
@@ -35,7 +35,7 @@ export default function FamiliesPage() {
         {/* Groom Card */}
         <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-yellow-600 shadow-lg p-10 text-center">
           <h2 className="text-2xl md:text-3xl font-serif text-[#7a0c1c] mb-6">
-            Groom's Family
+            वर पक्ष (Groom's Family)
           </h2>
 
           <p className="text-lg text-gray-700 mb-4">श्री विनोद कुमार</p>
