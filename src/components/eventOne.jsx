@@ -304,64 +304,53 @@ export default function WeddingLanding() {
       {/* //---------------------------------------------------------- */}
       {/* Fonts + Animations */}
       <style>
-{`
-  /* 🌿 Layer 1 (base slow wind) */
-  @keyframes wind1 {
-    0%   { transform: translate(0px, 0px) rotate(0deg) scale(1); }
-    25%  { transform: translate(2px, 1px) rotate(0.5deg) scale(1.01); }
-    50%  { transform: translate(0px, 0px) rotate(0deg) scale(1); }
-    75%  { transform: translate(-2px, -1px) rotate(-0.5deg) scale(0.99); }
-    100% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
-  }
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
 
-  /* 🌿 Layer 2 (slightly stronger wind) */
-  @keyframes wind2 {
-    0%   { transform: translate(0px, 0px) rotate(0deg); }
-    25%  { transform: translate(-4px, 1px) rotate(-0.8deg); }
-    50%  { transform: translate(0px, 0px) rotate(0deg); }
-    75%  { transform: translate(4px, -1px) rotate(0.8deg); }
-    100% { transform: translate(0px, 0px) rotate(0deg); }
-  }
+          .font-serif { font-family: 'Playfair Display', serif; }
 
-  /* 🌿 Layer 3 (tiny fast movement = leaf flutter feel) */
-  @keyframes wind3 {
-    0%   { transform: translate(0px, 0px); }
-    20%  { transform: translate(1px, -1px); }
-    40%  { transform: translate(-1px, 1px); }
-    60%  { transform: translate(1px, 0px); }
-    80%  { transform: translate(-1px, -1px); }
-    100% { transform: translate(0px, 0px); }
-  }
+          /* Layer 1 (slow sway) */
+          @keyframes wind1 {
+            0%   { transform: translateX(0px) rotate(0deg); }
+            25%  { transform: translateX(2px) rotate(0.5deg); }
+            50%  { transform: translateX(0px) rotate(0deg); }
+            75%  { transform: translateX(-2px) rotate(-0.5deg); }
+            100% { transform: translateX(0px) rotate(0deg); }
+          }
 
-  .wind-layer-1 {
-    animation: wind1 7s ease-in-out infinite;
-  }
+          /* Layer 2 (slightly faster, different phase) */
+          @keyframes wind2 {
+            0%   { transform: translateX(0px) rotate(0deg); }
+            25%  { transform: translateX(-3px) rotate(-0.7deg); }
+            50%  { transform: translateX(0px) rotate(0deg); }
+            75%  { transform: translateX(3px) rotate(0.7deg); }
+            100% { transform: translateX(0px) rotate(0deg); }
+          }
 
-  .wind-layer-2 {
-    animation: wind2 5s ease-in-out infinite;
-    opacity: 0.7;
-  }
+          .wind-layer-1 {
+            animation: wind1 6s ease-in-out infinite;
+          }
 
-  .wind-layer-3 {
-    animation: wind3 3s ease-in-out infinite;
-    opacity: 0.4;
-  }
+          .wind-layer-2 {
+            animation: wind2 5s ease-in-out infinite;
+            opacity: 0.7;
+          }
 
-  /* 🌼 CENTER SWING (enhanced) */
-  @keyframes swing {
-    0%   { transform: translateX(-50%) rotate(0deg); }
-    25%  { transform: translateX(-50%) rotate(3deg); }
-    50%  { transform: translateX(-50%) rotate(0deg); }
-    75%  { transform: translateX(-50%) rotate(-3deg); }
-    100% { transform: translateX(-50%) rotate(0deg); }
-  }
+          /* center swing */
+          @keyframes swing {
+            0%   { transform: translateX(-50%) rotate(0deg); }
+            25%  { transform: translateX(-50%) rotate(6deg); }
+            50%  { transform: translateX(-50%) rotate(0deg); }
+            75%  { transform: translateX(-50%) rotate(-6deg); }
+            100% { transform: translateX(-50%) rotate(0deg); }
+          }
 
-  .swing {
-    animation: swing 3.5s ease-in-out infinite;
-    transform-origin: top center;
-  }
-`}
-</style>
+          .swing {
+            animation: swing 4s ease-in-out infinite;
+            transform-origin: top center;
+          }
+        `}
+      </style>
       {/* //--------------------------------------------------------- */}
 
       {/* 🌸 TOP LEFT */}
