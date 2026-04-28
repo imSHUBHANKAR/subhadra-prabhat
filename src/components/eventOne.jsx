@@ -221,14 +221,32 @@
 //     </div>
 //   );
 // }
+//--------------------------------------------------------------------------
+//--------------------------------------------------------------------------
 
 import React from "react";
 import img1 from "../assets/shubh_img1.jpg";
 import img11 from "../assets/img11.svg";
+import sideimg1 from "../assets/sideimg1.svg";
+import ugadi from "../assets/ugadi.svg";
 
 export default function WeddingLanding() {
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 to-white flex items-center justify-center relative overflow-hidden px-4">
+        {/* <div className="flex flex-row ">
+
+      
+      <img
+        src={ugadi}
+        className="absolute w-32 sm:w-48 md:w-60 opacity-70 z-0"
+        alt=""
+      /><img
+        src={ugadi}
+        className="w-32 sm:w-48 md:w-60 opacity-100 z-0"
+        alt=""
+      />
+      </div> */}
 
       {/* Fonts + Animation */}
       <style>
@@ -248,18 +266,39 @@ export default function WeddingLanding() {
       </style>
 
       {/* 🌸 TOP LEFT */}
-      <img
+      {/* <img
         src="https://pngimg.com/uploads/rose/rose_PNG649.png"
         className="absolute top-0 left-0 w-32 sm:w-48 md:w-60 opacity-70 z-0"
         alt=""
-      />
+      /> */}
+      <div className="flex flex-row ">
 
-      {/* 🌸 TOP RIGHT */}
-      <img
+      
+      {/* <img
+        src={ugadi}
+        className="absolute w-32 sm:w-48 md:w-60 opacity-70 z-0"
+        alt=""
+      /> */}
+      {/* <img
+        src={ugadi}
+        className="w-32 sm:w-48 md:w-60 opacity-100 z-0"
+        alt=""
+      /> */}
+      </div>
+
+      {/* 🌸 TOP garland */}
+      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain"
+        style={{
+          backgroundImage:
+            `url(${ugadi})`,
+        }}
+      />
+       {/* 🌸 TOP RIGHT */}
+      {/* <img
         src="https://pngimg.com/uploads/rose/rose_PNG653.png"
         className="absolute top-0 right-0 w-32 sm:w-48 md:w-60 opacity-70 z-0"
         alt=""
-      />
+      /> */}
 
       {/* 🌸 BOTTOM LEFT (hide on very small screens) */}
       {/* <img
@@ -275,7 +314,7 @@ export default function WeddingLanding() {
         alt=""
       />
       <img
-       src={img11}
+       src={sideimg1}
         className="absolute bottom-0 left-0 w-60 opacity-100"
          alt=""
        />
@@ -340,5 +379,98 @@ export default function WeddingLanding() {
         </div>
       </div>
     </div>
+    </>
   );
 }
+//------------------------------------------------------------------------
+//------------------------------------------------------------------------
+// import React from "react";
+// import ugadi from "../assets/ugadi.svg";
+
+// export default function WeddingLanding() {
+//   return (
+//     <div className="min-h-screen relative overflow-hidden flex items-center justify-center px-4 bg-gradient-to-b from-pink-300 via-pink-100 to-white">
+
+//       {/* Google Fonts */}
+//       <style>
+//         {`
+//           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
+
+//           .font-serif { font-family: 'Playfair Display', serif; }
+//           .font-sans { font-family: 'Poppins', sans-serif; }
+//         `}
+//       </style>
+
+//       {/* 🌼 TOP GARLAND STRIP (REPEATING) */}
+//       <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain"
+//         style={{
+//           backgroundImage:
+//             `url(${ugadi})`,
+//         }}
+//       />
+      
+
+//       {/* 🌼 HANGING EXTRA (center pieces) */}
+//       <img
+//         src={ugadi}
+//         alt=""
+//         className="absolute top-0 left-1/2 -translate-x-1/2 w-40 sm:w-56 md:w-72"
+//       />
+
+//       {/* 🌸 LEFT RANGOLI */}
+//       <img
+//         src="https://pngimg.com/uploads/flowers/flowers_PNG102.png"
+//         alt=""
+//         className="absolute bottom-4 left-2 sm:left-6 w-28 sm:w-40 md:w-52"
+//       />
+
+//       {/* 👰 RIGHT COUPLE */}
+//       <img
+//         src="https://cdn-icons-png.flaticon.com/512/4140/4140048.png"
+//         alt=""
+//         className="absolute bottom-4 right-2 sm:right-6 w-28 sm:w-40 md:w-52"
+//       />
+
+//       {/* 💍 MAIN CONTENT */}
+//       <div className="relative z-10 text-center max-w-2xl mt-20 sm:mt-28">
+
+//         {/* Title */}
+//         <h1 className="text-3xl sm:text-5xl md:text-6xl text-red-700 font-serif tracking-wide">
+//           WEDDING INVITATION
+//         </h1>
+
+//         {/* Names */}
+//         <p className="mt-6 text-lg sm:text-xl md:text-3xl text-gray-800 font-medium leading-relaxed">
+//           आयुष्मति सुभद्रा कुमारी (गुड़िया)
+//         </p>
+
+//         <p className="text-xl text-red-500 my-2">&</p>
+
+//         <p className="text-lg sm:text-xl md:text-3xl text-gray-800 font-medium">
+//           चिरंजीवी प्रभात कुमार
+//         </p>
+
+//         {/* Date */}
+//         <p className="mt-6 text-2xl sm:text-3xl md:text-4xl text-red-600 font-serif">
+//           13 May 2026
+//         </p>
+
+//         {/* Description */}
+//         <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-600 px-2">
+//           Together with their families, invite you to celebrate their union.
+//         </p>
+
+//         {/* Buttons */}
+//         <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+//           <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-red-500 text-white hover:bg-red-600 transition">
+//             View Events
+//           </button>
+
+//           <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-red-500 text-red-500 hover:bg-red-100 transition">
+//             RSVP Now
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
