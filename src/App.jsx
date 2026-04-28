@@ -10,6 +10,8 @@ import EventsPage from './components/EventsPage'
 import Timeline from './components/Timeline'
 import Venue from './components/Venue'
 import Memories from './components/Memories'
+import WeddingFooter from './components/Footer'
+import RSVPSection from './components/RSVP_Form'
 
 
 function App() {
@@ -29,6 +31,8 @@ function App() {
     <Timeline/>
     <Venue/>
     <Memories/>
+    <RSVPSection/>
+    <WeddingFooter/>
     </>
   )
 }
