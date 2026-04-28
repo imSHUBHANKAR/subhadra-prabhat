@@ -265,6 +265,94 @@ export default function WeddingLanding() {
         `}
       </style>
 
+      {/* Fonts + Animations */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
+
+          .font-serif { font-family: 'Playfair Display', serif; }
+          .font-sans { font-family: 'Poppins', sans-serif; }
+
+          /* 🌿 gentle wind sway */
+          @keyframes sway {
+            0%   { transform: rotate(0deg) translateX(0px); }
+            25%  { transform: rotate(0.5deg) translateX(2px); }
+            50%  { transform: rotate(0deg) translateX(0px); }
+            75%  { transform: rotate(-0.5deg) translateX(-2px); }
+            100% { transform: rotate(0deg) translateX(0px); }
+          }
+
+          /* 🌿 hanging swing (more visible) */
+          @keyframes swing {
+            0%   { transform: translateX(-50%) rotate(0deg); }
+            25%  { transform: translateX(-50%) rotate(2deg); }
+            50%  { transform: translateX(-50%) rotate(0deg); }
+            75%  { transform: translateX(-50%) rotate(-2deg); }
+            100% { transform: translateX(-50%) rotate(0deg); }
+          }
+
+          .sway {
+            animation: sway 6s ease-in-out infinite;
+          }
+
+          .swing {
+            animation: swing 4s ease-in-out infinite;
+            transform-origin: top center;
+          }
+        `}
+      </style>
+      {/* //---------------------------------------------------------- */}
+      {/* Fonts + Animations */}
+      <style>
+        {`
+          @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
+
+          .font-serif { font-family: 'Playfair Display', serif; }
+
+          /* Layer 1 (slow sway) */
+          @keyframes wind1 {
+            0%   { transform: translateX(0px) rotate(0deg); }
+            25%  { transform: translateX(2px) rotate(0.5deg); }
+            50%  { transform: translateX(0px) rotate(0deg); }
+            75%  { transform: translateX(-2px) rotate(-0.5deg); }
+            100% { transform: translateX(0px) rotate(0deg); }
+          }
+
+          /* Layer 2 (slightly faster, different phase) */
+          @keyframes wind2 {
+            0%   { transform: translateX(0px) rotate(0deg); }
+            25%  { transform: translateX(-3px) rotate(-0.7deg); }
+            50%  { transform: translateX(0px) rotate(0deg); }
+            75%  { transform: translateX(3px) rotate(0.7deg); }
+            100% { transform: translateX(0px) rotate(0deg); }
+          }
+
+          .wind-layer-1 {
+            animation: wind1 6s ease-in-out infinite;
+          }
+
+          .wind-layer-2 {
+            animation: wind2 5s ease-in-out infinite;
+            opacity: 0.7;
+          }
+
+          /* center swing */
+          @keyframes swing {
+            0%   { transform: translateX(-50%) rotate(0deg); }
+            25%  { transform: translateX(-50%) rotate(2deg); }
+            50%  { transform: translateX(-50%) rotate(0deg); }
+            75%  { transform: translateX(-50%) rotate(-2deg); }
+            100% { transform: translateX(-50%) rotate(0deg); }
+          }
+
+          .swing {
+            animation: swing 4s ease-in-out infinite;
+            transform-origin: top center;
+          }
+        `}
+      </style>
+      {/* //--------------------------------------------------------- */}
+
       {/* 🌸 TOP LEFT */}
       {/* <img
         src="https://pngimg.com/uploads/rose/rose_PNG649.png"
@@ -287,10 +375,11 @@ export default function WeddingLanding() {
       </div>
 
       {/* 🌸 TOP garland */}
-      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain"
+      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain sway wind-layer-1"
         style={{
           backgroundImage:
             `url(${ugadi})`,
+            backgroundSize: "auto 100%",
         }}
       />
        {/* 🌸 TOP RIGHT */}
@@ -308,11 +397,11 @@ export default function WeddingLanding() {
       /> */}
 
       {/* 🌸 BOTTOM RIGHT */}
-      <img
+      {/* <img
         src={img11}
-        className="hidden sm:block absolute bottom-0 right-0 w-40 md:w-60 opacity-80 z-0"
+        className="hidden sm:block absolute bottom-0 right-0 w-40 md:w-60 opacity-10 z-0"
         alt=""
-      />
+      /> */}
       <img
        src={sideimg1}
         className="absolute bottom-0 left-0 w-60 opacity-100"
@@ -342,7 +431,7 @@ export default function WeddingLanding() {
       <div className="relative z-10 text-center max-w-2xl fade-up">
         
         {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif tracking-wide">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif tracking-wide drop-shadow-sm">
           WEDDING INVITATION
         </h1>
 
@@ -369,11 +458,11 @@ export default function WeddingLanding() {
 
         {/* Buttons */}
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-rose-500 text-white hover:bg-rose-600 transition text-sm sm:text-base">
+          <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-rose-500 text-white hover:bg-rose-600 transition text-sm sm:text-base shadow-md hover:scale-105 duration-300">
             View Events
           </button>
 
-          <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-rose-500 text-rose-500 hover:bg-rose-100 transition text-sm sm:text-base">
+          <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-rose-500 text-rose-500 hover:bg-rose-100 transition text-sm sm:text-base shadow-sm hover:scale-105 duration-300">
             RSVP Now
           </button>
         </div>
