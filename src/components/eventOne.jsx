@@ -339,9 +339,9 @@ export default function WeddingLanding() {
           /* center swing */
           @keyframes swing {
             0%   { transform: translateX(-50%) rotate(0deg); }
-            25%  { transform: translateX(-50%) rotate(2deg); }
+            25%  { transform: translateX(-50%) rotate(6deg); }
             50%  { transform: translateX(-50%) rotate(0deg); }
-            75%  { transform: translateX(-50%) rotate(-2deg); }
+            75%  { transform: translateX(-50%) rotate(-6deg); }
             100% { transform: translateX(-50%) rotate(0deg); }
           }
 
@@ -375,7 +375,7 @@ export default function WeddingLanding() {
       </div>
 
       {/* 🌸 TOP garland */}
-      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain sway wind-layer-1"
+      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain wind-layer-1"
         style={{
           backgroundImage:
             `url(${ugadi})`,
