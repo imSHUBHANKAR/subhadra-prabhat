@@ -54,7 +54,7 @@ export default function WeddingFooter() {
               BRIDE'S FAMILY
             </p>
             <p className="text-gray-200 flex items-center justify-center gap-2">
-              📞 +91 XXXXX XXXXX
+              📞 +91 99348 07041
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export default function WeddingFooter() {
               GROOM'S FAMILY
             </p>
             <p className="text-gray-200 flex items-center justify-center gap-2">
-              📞 +91 XXXXX XXXXX
+              📞 +91 78087 09989
             </p>
           </div>
         </div>
