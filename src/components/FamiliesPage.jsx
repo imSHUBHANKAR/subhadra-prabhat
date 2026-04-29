@@ -1,11 +1,14 @@
 import React from "react";
 
+//bg-[#f5f1eb]
+//text-[#7a0c1c]
+//border-yellow-600
 export default function FamiliesPage() {
   return (
-    <div className="min-h-screen bg-[#f5f1eb] flex flex-col items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-gradient-to-r from-pink-300 to-pink-100 flex flex-col items-center justify-center px-4 py-10">
       
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-serif text-[#7a0c1c] mb-12 tracking-wide">
+      <h1 className="text-4xl md:text-5xl font-serif text-pink-800 mb-12 tracking-wide">
         Our Families
       </h1>
 
@@ -13,8 +16,8 @@ export default function FamiliesPage() {
       <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl">
         
         {/* Bride Card */}
-        <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-yellow-600 shadow-lg p-10 text-center">
-          <h2 className="text-2xl md:text-3xl font-serif text-[#7a0c1c] mb-6">
+        <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-pink-900 shadow-lg p-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-serif text-pink-800 mb-6">
             वधू पक्ष (Bride's Family)
           </h2>
 
@@ -33,8 +36,8 @@ export default function FamiliesPage() {
         </div>
 
         {/* Groom Card */}
-        <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-yellow-600 shadow-lg p-10 text-center">
-          <h2 className="text-2xl md:text-3xl font-serif text-[#7a0c1c] mb-6">
+        <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-pink-900 shadow-lg p-10 text-center">
+          <h2 className="text-2xl md:text-3xl font-serif text-pink-800 mb-6">
             वर पक्ष (Groom's Family)
           </h2>
 

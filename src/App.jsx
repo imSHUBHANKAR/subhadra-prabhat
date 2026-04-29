@@ -12,6 +12,7 @@ import Venue from './components/Venue'
 import Memories from './components/Memories'
 import WeddingFooter from './components/Footer'
 import RSVPSection from './components/RSVP_Form'
+import MusicPlayer from './components/MusicPlayer'
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
     <Memories/>
     <RSVPSection/>
     <WeddingFooter/>
+    <MusicPlayer/>
     </>
   )
 }
