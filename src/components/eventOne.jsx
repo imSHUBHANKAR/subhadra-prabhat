@@ -229,6 +229,8 @@ import img1 from "../assets/shubh_img1.jpg";
 import img11 from "../assets/img11.svg";
 import sideimg1 from "../assets/sideimg1.svg";
 import ugadi from "../assets/ugadi.svg";
+import Ganesha from "../assets/Ganesha.svg";
+
 
 export default function WeddingLanding() {
   return (
@@ -375,7 +377,7 @@ export default function WeddingLanding() {
       </div>
 
       {/* 🌸 TOP garland */}
-      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain wind-layer-1"
+      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain wind-layer-1 z-50 pointer-events-none"
         style={{
           backgroundImage:
             `url(${ugadi})`,
@@ -384,8 +386,8 @@ export default function WeddingLanding() {
       />
        {/* 🌸 TOP RIGHT */}
       {/* <img
-        src="https://pngimg.com/uploads/rose/rose_PNG653.png"
-        className="absolute top-0 right-0 w-32 sm:w-48 md:w-60 opacity-70 z-0"
+        src={Ganesha}
+        className="absolute top-20 right-0 w-32 sm:w-48 md:w-60 opacity-100 z-0"
         alt=""
       /> */}
 
@@ -429,6 +431,15 @@ export default function WeddingLanding() {
 
       {/* ✅ MAIN CONTENT */}
       <div className="relative z-10 text-center max-w-2xl fade-up">
+
+        {/* Ganesha */}
+        <div className="flex justify-center text-2xl text-center sm:text-4xl md:text-6xl text-rose-700 font-serif tracking-wide drop-shadow-sm">
+        <img
+        src={Ganesha}
+        className="relative align-middle w-24 sm:w-48 md:w-80 opacity-100"
+        alt=""
+      />
+      </div>
         
         {/* Heading */}
         <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif tracking-wide drop-shadow-sm">
@@ -458,11 +469,27 @@ export default function WeddingLanding() {
 
         {/* Buttons */}
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full bg-rose-500 text-white hover:bg-rose-600 transition text-sm sm:text-base shadow-md hover:scale-105 duration-300">
+          <button className=" sm:px-8 sm:py-3 bg-red-100 hover:bg-rose-600 sm:text-base 
+          px-10 py-4 rounded-full
+    bg-gradient-to-r from-pink-800 to-pink-400
+    text-white text-lg font-medium
+    backdrop-blur-md
+    shadow-lg shadow-pink-300/40
+    border border-white/30
+    hover:scale-105 hover:shadow-xl
+    transition-all duration-300">
             View Events
           </button>
 
-          <button className="px-6 sm:px-8 py-2 sm:py-3 rounded-full border border-rose-500 text-rose-500 hover:bg-rose-100 transition text-sm sm:text-base shadow-sm hover:scale-105 duration-300">
+          <button className="sm:px-8 sm:py-3 sm:text-base
+          px-10 py-4 rounded-full
+    bg-white/20
+    text-pink-500 text-lg font-medium
+    backdrop-blur-md
+    border border-pink-400
+    shadow-md
+    hover:bg-white/30 hover:scale-105
+    transition-all duration-300">
             RSVP Now
           </button>
         </div>
