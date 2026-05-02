@@ -524,7 +524,7 @@ export default function RSVPSection() {
         "5CE0Rdx5PIf4FPc_a"
       )
       .then(() => {
-        alert("✅ RSVP Sent Successfully!");
+        alert("✅ RSVP Sent Successfully on email!  Also Send on What's App...");
 
         // 📱 WHATSAPP MESSAGE
         const whatsappMessage = `
