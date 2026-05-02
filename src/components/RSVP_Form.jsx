@@ -559,7 +559,7 @@ Message: ${formData.message}
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 flex flex-col items-center justify-center px-4 py-16">
+    <div id="rsvp" className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 flex flex-col items-center justify-center px-4 py-16">
 
       {/* Header */}
       <h1 className="text-4xl md:text-5xl text-pink-800 font-serif mb-2">

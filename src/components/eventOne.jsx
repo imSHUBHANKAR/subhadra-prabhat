@@ -233,6 +233,7 @@ import Ganesha from "../assets/Ganesha.svg";
 import Barati from "../assets/barati.svg"
 
 
+
 export default function WeddingLanding() {
   return (
     <>
@@ -480,7 +481,13 @@ export default function WeddingLanding() {
 
         {/* Buttons */}
         <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <button className=" sm:px-8 sm:py-3 bg-red-100 hover:bg-rose-600 sm:text-base 
+          <button 
+          onClick={() => {
+    document
+      .getElementById("events")
+      .scrollIntoView({ behavior: "smooth" });
+  }}
+          className=" sm:px-8 sm:py-3 bg-red-100 hover:bg-rose-600 sm:text-base 
           px-10 py-4 rounded-full
     bg-gradient-to-r from-pink-800 to-pink-400
     text-white text-lg font-medium
@@ -492,7 +499,13 @@ export default function WeddingLanding() {
             View Events
           </button>
 
-          <button className="sm:px-8 sm:py-3 sm:text-base
+          <button 
+          onClick={() => {
+    document
+      .getElementById("rsvp")
+      .scrollIntoView({ behavior: "smooth" });
+  }}
+          className="sm:px-8 sm:py-3 sm:text-base
           px-10 py-4 rounded-full
     bg-white/20
     text-pink-500 text-lg font-medium

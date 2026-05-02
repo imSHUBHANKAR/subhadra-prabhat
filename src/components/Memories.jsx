@@ -1,13 +1,16 @@
 import React, { useEffect } from "react";
+import img1 from '../assets/event_img1.jpg'
+import img2 from '../assets/event_img2.jpg'
+import img3 from '../assets/event_img3.png'
+import img44 from '../assets/event_img44.jpg'
+import img4 from '../assets/event_img4.png'
+import img5 from '../assets/event_img5.png'
+import img6 from '../assets/event_img6.png'
+import img7 from '../assets/event_img7.png'
 
 const Memories = () => {
   const images = [
-    "https://images.unsplash.com/photo-1604147706283-0f7f3b3a8b64",
-    "https://images.unsplash.com/photo-1604147495798-57beb5d6af73",
-    "https://images.unsplash.com/photo-1603575448878-868a20723f5d",
-    "https://images.unsplash.com/photo-1610173826608-b1f1c6e14c2f",
-    "https://images.unsplash.com/photo-1583391733956-6c77aab6f7d2",
-    "https://images.unsplash.com/photo-1604147495798-57beb5d6af73",
+    img1,img2,img7,img44,img3,img5,img6
   ];
 
   useEffect(() => {

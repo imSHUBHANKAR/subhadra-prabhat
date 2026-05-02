@@ -29,7 +29,7 @@ const events = [
 
 export default function EventsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 px-4 py-12 flex flex-col items-center">
+    <div id="events" className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 px-4 py-12 flex flex-col items-center">
       
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-serif text-pink-800 mb-3">
