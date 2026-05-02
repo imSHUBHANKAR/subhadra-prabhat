@@ -559,10 +559,10 @@ Message: ${formData.message}
   };
 
   return (
-    <div className="min-h-screen bg-[#efe3d3] flex flex-col items-center justify-center px-4 py-16">
+    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 flex flex-col items-center justify-center px-4 py-16">
 
       {/* Header */}
-      <h1 className="text-4xl md:text-5xl text-red-800 font-serif mb-2">
+      <h1 className="text-4xl md:text-5xl text-pink-800 font-serif mb-2">
         RSVP
       </h1>
       <p className="text-gray-600 mb-10">
@@ -572,7 +572,7 @@ Message: ${formData.message}
       {/* Form */}
       <form
         onSubmit={handleSubmit}
-        className="w-full max-w-3xl bg-gray-100 rounded-2xl border border-yellow-500 shadow-lg p-6 md:p-10"
+        className="w-full max-w-3xl bg-gray-100 rounded-2xl border border-pink-500 shadow-lg p-6 md:p-10"
       >
 
         {/* Name */}
@@ -584,7 +584,7 @@ Message: ${formData.message}
             required
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-3 border border-yellow-500 rounded-xl"
+            className="w-full p-3 border border-pink-500 rounded-xl"
           />
         </div>
 
@@ -597,7 +597,7 @@ Message: ${formData.message}
             required
             value={formData.phone}
             onChange={handleChange}
-            className="w-full p-3 border border-yellow-500 rounded-xl"
+            className="w-full p-3 border border-pink-500 rounded-xl"
           />
         </div>
 
@@ -610,7 +610,7 @@ Message: ${formData.message}
               name="guests"
               value={formData.guests}
               onChange={handleChange}
-              className="w-full p-3 border border-yellow-500 rounded-xl"
+              className="w-full p-3 border border-pink-500 rounded-xl"
             >
               {[1,2,3,4,5].map(n => (
                 <option key={n}>{n}</option>
@@ -624,7 +624,7 @@ Message: ${formData.message}
               name="attend"
               value={formData.attend}
               onChange={handleChange}
-              className="w-full p-3 border border-yellow-500 rounded-xl"
+              className="w-full p-3 border border-pink-500 rounded-xl"
             >
               <option value="yes">Yes, I'll be there!</option>
               <option value="no">Sorry, can't attend</option>
@@ -641,7 +641,7 @@ Message: ${formData.message}
             value={formData.message}
             onChange={handleChange}
             placeholder="Share your thoughts..."
-            className="w-full p-3 border border-yellow-500 rounded-xl"
+            className="w-full p-3 border border-pink-500 rounded-xl"
           />
         </div>
 
@@ -649,7 +649,7 @@ Message: ${formData.message}
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-3 bg-red-800 text-yellow-400 rounded-xl hover:bg-red-900 transition"
+          className="w-full py-3 bg-pink-800 text-white rounded-xl hover:bg-pink-700 transition"
         >
           {loading ? "Sending..." : "Submit RSVP"}
         </button>

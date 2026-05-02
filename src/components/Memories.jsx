@@ -30,14 +30,14 @@ const Memories = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f8f5f2] py-16 px-4 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 py-16 px-4 relative overflow-hidden">
       
       {/* Heading */}
       <div className="text-center mb-12 fade-up">
-        <p className="tracking-widest text-sm text-red-600">
+        <p className="tracking-widest text-sm text-pink-800">
           MEMORIES IN FRAMES
         </p>
-        <h1 className="text-3xl md:text-5xl font-serif text-red-800 mt-2">
+        <h1 className="text-3xl md:text-5xl font-serif text-pink-800 mt-2">
           Moments of Love
         </h1>
         <p className="text-gray-600 mt-2 italic">क्षणों की एक झलक</p>

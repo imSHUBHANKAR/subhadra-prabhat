@@ -5,7 +5,7 @@ import React from "react";
 //border-yellow-600
 export default function FamiliesPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-pink-300 to-pink-100 flex flex-col items-center justify-center px-4 py-10">
+    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 flex flex-col items-center justify-center px-4 py-10">
       
       {/* Title */}
       <h1 className="text-4xl md:text-5xl font-serif text-pink-800 mb-12 tracking-wide">
@@ -16,7 +16,7 @@ export default function FamiliesPage() {
       <div className="relative flex flex-col md:flex-row items-center justify-center gap-10 w-full max-w-6xl">
         
         {/* Bride Card */}
-        <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-pink-900 shadow-lg p-10 text-center">
+        <div className="w-full md:w-1/2 bg-white rounded-4xl border-2 border-pink-900 shadow-lg p-10 text-center">
           <h2 className="text-2xl md:text-3xl font-serif text-pink-800 mb-6">
             वधू पक्ष (Bride's Family)
           </h2>
@@ -30,13 +30,13 @@ export default function FamiliesPage() {
 
         {/* Center Divider */}
         <div className="hidden md:flex items-center justify-center absolute">
-          <div className="w-14 h-14 bg-yellow-600 rounded-full flex items-center justify-center shadow-lg">
-            <div className="w-4 h-4 bg-[#7a0c1c] rounded-full"></div>
+          <div className="w-14 h-14 bg-pink-800 rounded-full flex items-center justify-center shadow-lg">
+            <div className="w-4 h-4 bg-white rounded-full"></div>
           </div>
         </div>
 
         {/* Groom Card */}
-        <div className="w-full md:w-1/2 bg-white rounded-3xl border-2 border-pink-900 shadow-lg p-10 text-center">
+        <div className="w-full md:w-1/2 bg-white rounded-4xl border-2 border-pink-900 shadow-lg p-10 text-center">
           <h2 className="text-2xl md:text-3xl font-serif text-pink-800 mb-6">
             वर पक्ष (Groom's Family)
           </h2>

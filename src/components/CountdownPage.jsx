@@ -28,8 +28,8 @@ export default function CountdownPage() {
   const Circle = ({ value, label }) => (
     <div className="flex flex-col items-center">
       
-        <div className="w-28 h-28 md:w-32 md:h-32 rounded-full border-[3px] border-[#d4af37] flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.4)] bg-[#f7efe5]">
-        <span className="text-3xl md:text-4xl text-[#7a0c1c] font-serif">
+        <div className="w-28 h-28 md:w-32 md:h-32 rounded-full border-[3px] border-pink-800 flex items-center justify-center shadow-[0_0_15px_rgba(212,175,55,0.4)] bg-pink-200">
+        <span className="text-3xl md:text-4xl text-pink-800 font-serif">
           {value}
         </span>
       </div>
@@ -38,10 +38,10 @@ export default function CountdownPage() {
   );
 
   return (
-    <div className="min-h-screen bg-[#f5e9dc] flex flex-col items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 flex flex-col items-center justify-center px-4 py-12">
       
       {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-serif text-[#7a0c1c] mb-4 text-center">
+      <h1 className="text-4xl md:text-5xl font-serif text-pink-800 mb-4 text-center">
         Counting Down to Forever
       </h1>
 

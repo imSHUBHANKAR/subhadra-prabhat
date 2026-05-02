@@ -212,19 +212,19 @@ const Timeline = () => {
     {
       title: "नामधुन",
       date: "4 May 2026",
-      time: "6:00 PM",
+      time: "4:00 PM",
       location: "निवास स्थान, परशुरामपुर",
     },
     {
       title: "सत्संग",
       date: "5 May 2026",
-      time: "5:00 PM",
+      time: "6:00 PM",
       location: "निवास स्थान, परशुरामपुर",
     },
     {
       title: "हल्दी एवं मेहंदी",
       date: "12 May 2026",
-      time: "2:00 PM",
+      time: "11:00 AM",
       location: "निवास स्थान, परशुरामपुर",
     },
     {
@@ -259,8 +259,8 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className="bg-[#f8f5f2] min-h-screen py-16 px-4">
-      <h1 className="text-center text-3xl md:text-4xl font-serif text-red-800 mb-12">
+    <div className="bg-gradient-to-b from-pink-400 via-pink-100 min-h-screen py-16 px-4">
+      <h1 className="text-center text-3xl md:text-4xl font-serif text-pink-800 mb-12">
         Celebration Timeline
       </h1>
 
@@ -274,18 +274,18 @@ const Timeline = () => {
             
             {/* Dot */}
             <div className="relative z-10">
-              <div className="w-4 h-4 bg-red-700 rounded-full absolute left-2 md:left-1/2 md:-translate-x-1/2 top-2"></div>
+              <div className="w-4 h-4 bg-pink-800 rounded-full absolute left-2 md:left-1/2 md:-translate-x-1/2 top-2"></div>
             </div>
 
             {/* Card */}
             <div
-              className={`timeline-card ml-10 md:ml-0 w-full md:w-[45%] bg-white border border-yellow-400 rounded-xl shadow-md p-5 transition-all duration-700
+              className={`timeline-card ml-10 md:ml-0 w-full md:w-[45%] bg-white border border-pink-800 rounded-xl shadow-md p-5 transition-all duration-700
               
               ${index % 2 === 0 ? "md:mr-auto md:translate-x-[-100px]" : "md:ml-auto md:translate-x-[100px]"}
               
               translate-y-10 opacity-0`}
             >
-              <h2 className="text-lg font-semibold text-red-700">
+              <h2 className="text-lg font-semibold text-pink-800">
                 {event.title}
               </h2>
 

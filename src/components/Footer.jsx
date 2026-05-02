@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WeddingFooter() {
   return (
-    <footer className="relative bg-[#7a0000] text-white py-16 px-6 overflow-hidden">
+    <footer className="relative bg-pink-800 text-white py-16 px-6 overflow-hidden">
 
       {/* 🌸 Floating Petals */}
       <style>
