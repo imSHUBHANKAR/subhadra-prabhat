@@ -230,6 +230,7 @@ import img11 from "../assets/img11.svg";
 import sideimg1 from "../assets/sideimg1.svg";
 import ugadi from "../assets/ugadi.svg";
 import Ganesha from "../assets/Ganesha.svg";
+import Barati from "../assets/barati.svg"
 
 
 export default function WeddingLanding() {
@@ -404,14 +405,24 @@ export default function WeddingLanding() {
         className="hidden sm:block absolute bottom-0 right-0 w-40 md:w-60 opacity-10 z-0"
         alt=""
       /> */}
-      <img
+      {/* <img
        src={sideimg1}
-        className="absolute bottom-0 left-0 w-60 opacity-100"
+        className="absolute bottom-0 left-0 w-60 opacity-100 bg-amber-300"
+         alt=""
+       /> */}
+       {/* <img
+       src={img11}
+        className="absolute bottom-0 right-0 w-60 opacity-100"
+         alt=""
+       /> */}
+       <img
+       src={Barati}
+        className="absolute bottom-0 right-0 w-90 opacity-100"
          alt=""
        />
        <img
-       src={img11}
-        className="absolute bottom-0 right-0 w-60 opacity-100"
+       src={Barati}
+        className="absolute bottom-0 left-0 w-90 opacity-100 scale-x-[-1]"
          alt=""
        />
 
