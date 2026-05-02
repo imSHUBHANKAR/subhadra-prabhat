@@ -420,11 +420,11 @@ export default function WeddingLanding() {
         className="absolute bottom-0 right-0 w-90 opacity-100"
          alt=""
        />
-       <img
+       {/* <img
        src={Barati}
         className="absolute bottom-0 left-0 w-90 opacity-100 scale-x-[-1]"
          alt=""
-       />
+       /> */}
 
       {/* 🌸 SIDE DECOR (only desktop) */}
       <img
