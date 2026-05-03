@@ -61,14 +61,21 @@ const Venue = () => {
             Please reach out for travel and stay assistance.
           </p>
 
-          <button className="mt-6 bg-pink-800 hover:bg-red-800 text-white px-6 py-3 rounded-full transition transform hover:scale-105">
+          <button 
+          onClick={() =>
+    window.open(
+      "https://maps.app.goo.gl/6dhfMfq39buhaDYM8",
+      "_blank"
+    )
+  }
+  className="mt-6 bg-pink-800 hover:bg-red-800 text-white px-6 py-3 rounded-full transition transform hover:scale-105">
             📍 GET DIRECTIONS
           </button>
         </div>
 
         {/* Map */}
         {/* src="https://www.google.com/maps?q=Parsurampur,Bihar,India&output=embed" */}
-        <div className="rounded-3xl overflow-hidden border-2 border-pink-800 shadow-lg fade-up">
+        <div className="rounded-3xl overflow-hidden border border-pink-800 shadow-lg fade-up">
           <iframe
             title="map"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d640.3621599079081!2d85.39088163051174!3d26.53872533489287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ecef3369b22ee7%3A0xdf97e9ca58e907ee!2sVinod%20kumar%2C%20High%20school%20teacher!5e0!3m2!1sen!2sin!4v1777740664722!5m2!1sen!2sin"
