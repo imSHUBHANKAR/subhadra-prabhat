@@ -21,11 +21,12 @@ export default function FamiliesPage() {
             वधू पक्ष (Bride's Family)
           </h2>
 
-          <p className="text-lg text-gray-700 mb-4">श्रीमती ललिता देवी</p>
+          <p className="text-lg text-gray-700 mb-2">श्रीमती ललिता देवी</p>
 
           <p className="text-gray-500 text-xl my-2">&</p>
 
-          <p className="text-lg text-gray-700">श्री विनोद कुमार</p>
+          <p className="text-lg text-gray-700 mb-2">श्री विनोद कुमार</p>
+          <p className="text-md font-style: italic text-gray-700">ग्राम+पो०- परशुरामपुर, थाना- परसौनी जिला- सीतामढ़ी (843325)</p>
         </div>
 
         {/* Center Divider */}
@@ -41,11 +42,12 @@ export default function FamiliesPage() {
             वर पक्ष (Groom's Family)
           </h2>
 
-          <p className="text-lg text-gray-700 mb-4">श्रीमती प्रमिला देवी</p>
+          <p className="text-lg text-gray-700 mb-2">श्रीमती प्रमिला देवी</p>
 
           <p className="text-gray-500 text-xl my-2">&</p>
 
-          <p className="text-lg text-gray-700">श्री रवि शंकर प्रसाद</p>
+          <p className="text-lg text-gray-700 mb-2">श्री रवि शंकर प्रसाद</p>
+          <p className="text-md font-style: italic text-gray-700">ग्ग्राम+पो०+थाना- गाढ़ा, जिला- सीतामढ़ी (843323)</p>
         </div>
       </div>
     </div>
