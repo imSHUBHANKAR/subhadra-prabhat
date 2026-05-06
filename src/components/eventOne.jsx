@@ -224,7 +224,8 @@
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
 
-import React from "react";
+
+import React, { useEffect, useState, useMemo } from "react";
 import img1 from "../assets/shubh_img1.jpg";
 import img11 from "../assets/img11.svg";
 import sideimg1 from "../assets/sideimg1.svg";
@@ -235,9 +236,98 @@ import Barati from "../assets/barati.svg"
 
 
 export default function WeddingLanding() {
+  // 💛 Typing Text
+  const brideFull = "आयुष्मति सुभद्रा कुमारी (गुड़िया)";
+  const groomFull = "चिरंजीवी प्रभात कुमार";
+
+  const [brideText, setBrideText] = useState("");
+  const [groomText, setGroomText] = useState("");
+  const [phase, setPhase] = useState("typingBride"); // control flow
+
+  // 🌸 Floating petals
+  // 🌸 Stable random petals (NO WARNINGS)
+  // const petals = useMemo(() => {
+  //   return Array.from({ length: 10 }).map(() => ({
+  //     left: `${Math.random() * 100}%`,
+  //     duration: `${5 + Math.random() * 5}s`,
+  //     size: `${12 + Math.random() * 18}px`,
+  //   }));
+  // }, []);
+  const petals = [
+  { left: "5%", duration: "6s", size: "14px", delay: "0s", flower: "🌸" },
+  { left: "12%", duration: "8s", size: "18px", delay: "1s", flower: "🌺" },
+  { left: "20%", duration: "7s", size: "16px", delay: "2s", flower: "🌼" },
+  { left: "28%", duration: "9s", size: "20px", delay: "0.5s", flower: "🌷" },
+  { left: "36%", duration: "6s", size: "15px", delay: "1.5s", flower: "💮" },
+  { left: "44%", duration: "8s", size: "22px", delay: "0s", flower: "🌸" },
+  { left: "52%", duration: "7s", size: "17px", delay: "2s", flower: "🌺" },
+  { left: "60%", duration: "9s", size: "19px", delay: "1s", flower: "🌼" },
+  { left: "68%", duration: "6s", size: "14px", delay: "3s", flower: "🌷" },
+  { left: "76%", duration: "8s", size: "18px", delay: "0.5s", flower: "💮" },
+  { left: "84%", duration: "7s", size: "16px", delay: "2.5s", flower: "🌸" },
+  { left: "92%", duration: "9s", size: "20px", delay: "1.2s", flower: "🌺" },
+];
+
+  // ✨ Typing animation loop
+  useEffect(() => {
+    let timeout;
+
+    if (phase === "typingBride") {
+      if (brideText.length < brideFull.length) {
+        timeout = setTimeout(() => {
+          setBrideText(brideFull.slice(0, brideText.length + 1));
+        }, 70);
+      } else {
+        timeout = setTimeout(() => setPhase("typingGroom"), 800);
+      }
+    }
+
+    else if (phase === "typingGroom") {
+      if (groomText.length < groomFull.length) {
+        timeout = setTimeout(() => {
+          setGroomText(groomFull.slice(0, groomText.length + 1));
+        }, 70);
+      } else {
+        timeout = setTimeout(() => setPhase("deleting"), 1200);
+      }
+    }
+
+    else if (phase === "deleting") {
+      if (groomText.length > 0) {
+        timeout = setTimeout(() => {
+          setGroomText(groomFull.slice(0, groomText.length - 1));
+        }, 40);
+      } else if (brideText.length > 0) {
+        timeout = setTimeout(() => {
+          setBrideText(brideFull.slice(0, brideText.length - 1));
+        }, 40);
+      } else {
+        timeout = setTimeout(() => setPhase("typingBride"), 600);
+      }
+    }
+
+    return () => clearTimeout(timeout);
+  }, [brideText, groomText, phase]);
+
+
+
   return (
     <>
     <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 to-white flex items-center justify-center relative overflow-hidden px-4">
+      {petals.map((petal, i) => (
+  <div
+    key={i}
+    className="absolute opacity-100 animate-petal"
+    style={{
+      left: petal.left,
+      animationDuration: petal.duration,
+      animationDelay: petal.delay,
+      fontSize: petal.size,
+    }}
+  >
+    {petal.flower}
+  </div>
+))}
         {/* <div className="flex flex-row ">
 
       
@@ -442,81 +532,131 @@ export default function WeddingLanding() {
       />
 
       {/* ✅ MAIN CONTENT */}
-      <div className="relative z-10 text-center max-w-2xl fade-up">
+      <div>
+      
+      <div className="min-h-screen flex items-center justify-center px-4 overflow-hidden relative">
 
-        {/* Ganesha */}
-        <div className="flex justify-center text-2xl text-center sm:text-4xl md:text-6xl text-rose-700 font-serif tracking-wide drop-shadow-sm">
-        <img
-        src={Ganesha}
-        className="relative align-middle w-24 sm:w-48 md:w-80 opacity-100"
-        alt=""
-      />
-      </div>
-        
+      {/* 🌸 Floating Petals */}
+      {/* {petals.map((petal, i) => (
+        <div
+          key={i}
+          className="absolute text-pink-400 opacity-60 animate-petal"
+          style={{
+            left: petal.left,
+            animationDuration: petal.duration,
+            fontSize: petal.size,
+          }}
+        >
+          🌸
+        </div>
+      ))} */}
+      
+
+      <div className="text-center max-w-2xl relative z-10">
+
+        {/* 🪔 Ganesha */}
+        <div className="flex justify-center">
+          <img
+            src={Ganesha}
+            className="w-24 sm:w-48 md:w-80 drop-shadow-lg"
+            alt="Ganesha"
+          />
+        </div>
+
         {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif tracking-wide drop-shadow-sm">
+        <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif mt-4">
           WEDDING INVITATION
         </h1>
 
-        {/* Names */}
-        <p className="mt-4 sm:mt-6 text-lg sm:text-xl md:text-3xl text-gray-800 font-medium leading-relaxed">
-          आयुष्मति सुभद्रा कुमारी (गुड़िया)
+        {/* 💖 Bride */}
+        <p className="mt-6 text-lg sm:text-xl md:text-3xl font-medium text-red-800 glow-text">
+          {brideText}
+          <span className="animate-pulse">|</span>
         </p>
 
+        {/* & */}
         <p className="text-xl sm:text-2xl text-rose-500 my-2">&</p>
 
-        <p className="text-lg sm:text-xl md:text-3xl text-gray-800 font-medium">
-          चिरंजीवी प्रभात कुमार
+        {/* 🤵 Groom */}
+        <p className="text-lg sm:text-xl md:text-3xl font-medium text-red-800 glow-text">
+          {groomText}
+          <span className="animate-pulse">|</span>
         </p>
 
         {/* Date */}
-        <p className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-4xl text-rose-600 font-serif">
+        <p className="mt-6 text-2xl sm:text-3xl md:text-4xl text-rose-600 font-serif">
           13 May 2026
         </p>
 
         {/* Description */}
-        <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-600 px-2">
+        <p className="mt-4 text-gray-600">
           Together with their families, invite you to celebrate their union.
         </p>
 
         {/* Buttons */}
-        <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-          <button 
-          onClick={() => {
-    document
-      .getElementById("events")
-      .scrollIntoView({ behavior: "smooth" });
-  }}
-          className=" sm:px-8 sm:py-3 bg-red-100 hover:bg-rose-600 sm:text-base 
-          px-10 py-4 rounded-full
-    bg-gradient-to-r from-pink-800 to-pink-400
-    text-white text-lg font-medium
-    backdrop-blur-md
-    shadow-lg shadow-pink-300/40
-    border border-white/30
-    hover:scale-105 hover:shadow-xl
-    transition-all duration-300">
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+
+          <button
+            onClick={() =>
+              document.getElementById("events")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="
+              px-8 py-3 rounded-full
+              bg-gradient-to-r from-pink-800 to-pink-400
+              text-white shadow-lg
+              hover:scale-105 transition
+            "
+          >
             View Events
           </button>
 
-          <button 
-          onClick={() => {
-    document
-      .getElementById("rsvp")
-      .scrollIntoView({ behavior: "smooth" });
-  }}
-          className="sm:px-8 sm:py-3 sm:text-base
-          px-10 py-4 rounded-full
-    bg-white/20
-    text-pink-500 text-lg font-medium
-    backdrop-blur-md
-    border border-pink-400
-    shadow-md
-    hover:bg-white/30 hover:scale-105
-    transition-all duration-300">
+          <button
+            onClick={() =>
+              document.getElementById("rsvp")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            className="
+              px-8 py-3 rounded-full
+              bg-white/20 backdrop-blur-md
+              border border-pink-400
+              text-pink-500
+              hover:scale-105 transition
+            "
+          >
             RSVP Now
           </button>
+
         </div>
+      </div>
+
+      {/* ✨ Styles */}
+      <style>
+        {`
+          .glow-text {
+            text-shadow: 0 0 8px rgba(255, 105, 180, 0.6),
+                         0 0 15px rgba(255, 105, 180, 0.4);
+          }
+
+          @keyframes petalFall {
+            0% {
+              transform: translateY(-10vh) translateX(0);
+            }
+            50% {
+              transform: translateY(50vh) translateX(30px);
+            }
+            100% {
+              transform: translateY(110vh) translateX(-30px);
+            }
+          }
+
+          .animate-petal {
+            animation: petalFall linear infinite;
+          }
+        `}
+      </style>
+    </div>
+      
       </div>
     </div>
     </>
