@@ -112,8 +112,6 @@
 //   )
 // }
 
-
-
 //This is final Home UI------------------------------
 // import React from "react";
 // import img1 from '../assets/shubh_img1.jpg'
@@ -121,7 +119,7 @@
 // export default function WeddingLanding() {
 //   return (
 //     <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 to-white flex items-center justify-center relative overflow-hidden font-sans">
-      
+
 //       {/* Google Font */}
 //       <style>
 //         {`
@@ -163,7 +161,6 @@
 //       />
 //       <div className="bg-amber-600">
 
-      
 //       <img
 //         src="https://pngimg.com/uploads/flowers/flowers_PNG102.png"
 //         className="absolute bottom-50 left-50 w-56 opacity-100"
@@ -173,7 +170,7 @@
 
 //       {/* Main Content */}
 //       <div className="text-center px-6 max-w-3xl z-10 fade-up">
-        
+
 //         {/* Heading */}
 //         <h1 className="text-4xl md:text-6xl text-rose-700 font-serif tracking-wide">
 //           WEDDING INVITATION
@@ -224,16 +221,13 @@
 //--------------------------------------------------------------------------
 //--------------------------------------------------------------------------
 
-
 import React, { useEffect, useState, useMemo } from "react";
 import img1 from "../assets/shubh_img1.jpg";
 import img11 from "../assets/img11.svg";
 import sideimg1 from "../assets/sideimg1.svg";
 import ugadi from "../assets/ugadi.svg";
 import Ganesha from "../assets/Ganesha.svg";
-import Barati from "../assets/barati.svg"
-
-
+import Barati from "../assets/barati.svg";
 
 export default function WeddingLanding() {
   // 💛 Typing Text
@@ -254,19 +248,19 @@ export default function WeddingLanding() {
   //   }));
   // }, []);
   const petals = [
-  { left: "5%", duration: "6s", size: "14px", delay: "0s", flower: "🌸" },
-  { left: "12%", duration: "8s", size: "18px", delay: "1s", flower: "🌺" },
-  { left: "20%", duration: "7s", size: "16px", delay: "2s", flower: "🌼" },
-  { left: "28%", duration: "9s", size: "20px", delay: "0.5s", flower: "🌷" },
-  { left: "36%", duration: "6s", size: "15px", delay: "1.5s", flower: "💮" },
-  { left: "44%", duration: "8s", size: "22px", delay: "0s", flower: "🌸" },
-  { left: "52%", duration: "7s", size: "17px", delay: "2s", flower: "🌺" },
-  { left: "60%", duration: "9s", size: "19px", delay: "1s", flower: "🌼" },
-  { left: "68%", duration: "6s", size: "14px", delay: "3s", flower: "🌷" },
-  { left: "76%", duration: "8s", size: "18px", delay: "0.5s", flower: "💮" },
-  { left: "84%", duration: "7s", size: "16px", delay: "2.5s", flower: "🌸" },
-  { left: "92%", duration: "9s", size: "20px", delay: "1.2s", flower: "🌺" },
-];
+    { left: "5%", duration: "6s", size: "14px", delay: "0s", flower: "🌸" },
+    { left: "12%", duration: "8s", size: "18px", delay: "1s", flower: "🌺" },
+    { left: "20%", duration: "7s", size: "16px", delay: "2s", flower: "🌼" },
+    { left: "28%", duration: "9s", size: "20px", delay: "0.5s", flower: "🌷" },
+    { left: "36%", duration: "6s", size: "15px", delay: "1.5s", flower: "💮" },
+    { left: "44%", duration: "8s", size: "22px", delay: "0s", flower: "🌸" },
+    { left: "52%", duration: "7s", size: "17px", delay: "2s", flower: "🌺" },
+    { left: "60%", duration: "9s", size: "19px", delay: "1s", flower: "🌼" },
+    { left: "68%", duration: "6s", size: "14px", delay: "3s", flower: "🌷" },
+    { left: "76%", duration: "8s", size: "18px", delay: "0.5s", flower: "💮" },
+    { left: "84%", duration: "7s", size: "16px", delay: "2.5s", flower: "🌸" },
+    { left: "92%", duration: "9s", size: "20px", delay: "1.2s", flower: "🌺" },
+  ];
 
   // ✨ Typing animation loop
   useEffect(() => {
@@ -280,9 +274,7 @@ export default function WeddingLanding() {
       } else {
         timeout = setTimeout(() => setPhase("typingGroom"), 800);
       }
-    }
-
-    else if (phase === "typingGroom") {
+    } else if (phase === "typingGroom") {
       if (groomText.length < groomFull.length) {
         timeout = setTimeout(() => {
           setGroomText(groomFull.slice(0, groomText.length + 1));
@@ -290,9 +282,7 @@ export default function WeddingLanding() {
       } else {
         timeout = setTimeout(() => setPhase("deleting"), 1200);
       }
-    }
-
-    else if (phase === "deleting") {
+    } else if (phase === "deleting") {
       if (groomText.length > 0) {
         timeout = setTimeout(() => {
           setGroomText(groomFull.slice(0, groomText.length - 1));
@@ -309,25 +299,23 @@ export default function WeddingLanding() {
     return () => clearTimeout(timeout);
   }, [brideText, groomText, phase]);
 
-
-
   return (
     <>
-    <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 to-white flex items-center justify-center relative overflow-hidden px-4">
-      {petals.map((petal, i) => (
-  <div
-    key={i}
-    className="absolute opacity-100 animate-petal"
-    style={{
-      left: petal.left,
-      animationDuration: petal.duration,
-      animationDelay: petal.delay,
-      fontSize: petal.size,
-    }}
-  >
-    {petal.flower}
-  </div>
-))}
+      <div className="min-h-screen bg-gradient-to-b from-pink-400 via-pink-100 to-white flex items-center justify-center relative overflow-hidden px-4">
+        {petals.map((petal, i) => (
+          <div
+            key={i}
+            className="absolute opacity-100 animate-petal"
+            style={{
+              left: petal.left,
+              animationDuration: petal.duration,
+              animationDelay: petal.delay,
+              fontSize: petal.size,
+            }}
+          >
+            {petal.flower}
+          </div>
+        ))}
         {/* <div className="flex flex-row ">
 
       
@@ -342,9 +330,9 @@ export default function WeddingLanding() {
       />
       </div> */}
 
-      {/* Fonts + Animation */}
-      <style>
-        {`
+        {/* Fonts + Animation */}
+        <style>
+          {`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap');
           .font-serif { font-family: 'Playfair Display', serif; }
           .font-sans { font-family: 'Poppins', sans-serif; }
@@ -357,11 +345,11 @@ export default function WeddingLanding() {
             animation: fadeUp 1s ease-out;
           }
         `}
-      </style>
+        </style>
 
-      {/* Fonts + Animations */}
-      <style>
-        {`
+        {/* Fonts + Animations */}
+        <style>
+          {`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
 
           .font-serif { font-family: 'Playfair Display', serif; }
@@ -394,11 +382,11 @@ export default function WeddingLanding() {
             transform-origin: top center;
           }
         `}
-      </style>
-      {/* //---------------------------------------------------------- */}
-      {/* Fonts + Animations */}
-      <style>
-        {`
+        </style>
+        {/* //---------------------------------------------------------- */}
+        {/* Fonts + Animations */}
+        <style>
+          {`
           @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap');
 
           .font-serif { font-family: 'Playfair Display', serif; }
@@ -444,100 +432,96 @@ export default function WeddingLanding() {
             transform-origin: top center;
           }
         `}
-      </style>
-      {/* //--------------------------------------------------------- */}
+        </style>
+        {/* //--------------------------------------------------------- */}
 
-      {/* 🌸 TOP LEFT */}
-      {/* <img
+        {/* 🌸 TOP LEFT */}
+        {/* <img
         src="https://pngimg.com/uploads/rose/rose_PNG649.png"
         className="absolute top-0 left-0 w-32 sm:w-48 md:w-60 opacity-70 z-0"
         alt=""
       /> */}
-      <div className="flex flex-row ">
-
-      
-      {/* <img
+        <div className="flex flex-row ">
+          {/* <img
         src={ugadi}
         className="absolute w-32 sm:w-48 md:w-60 opacity-70 z-0"
         alt=""
       /> */}
-      {/* <img
+          {/* <img
         src={ugadi}
         className="w-32 sm:w-48 md:w-60 opacity-100 z-0"
         alt=""
       /> */}
-      </div>
+        </div>
 
-      {/* 🌸 TOP garland */}
-      <div className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain wind-layer-1 z-50 pointer-events-none"
-        style={{
-          backgroundImage:
-            `url(${ugadi})`,
+        {/* 🌸 TOP garland */}
+        <div
+          className="absolute top-0 left-0 w-full h-20 sm:h-28 md:h-32 bg-repeat-x bg-contain wind-layer-1 z-50 pointer-events-none"
+          style={{
+            backgroundImage: `url(${ugadi})`,
             backgroundSize: "auto 100%",
-        }}
-      />
-       {/* 🌸 TOP RIGHT */}
-      {/* <img
+          }}
+        />
+        {/* 🌸 TOP RIGHT */}
+        {/* <img
         src={Ganesha}
         className="absolute top-20 right-0 w-32 sm:w-48 md:w-60 opacity-100 z-0"
         alt=""
       /> */}
 
-      {/* 🌸 BOTTOM LEFT (hide on very small screens) */}
-      {/* <img
+        {/* 🌸 BOTTOM LEFT (hide on very small screens) */}
+        {/* <img
         src={img1}
         className="hidden sm:block absolute bottom-0 left-0 w-40 md:w-60 opacity-80 z-0"
         alt=""
       /> */}
 
-      {/* 🌸 BOTTOM RIGHT */}
-      {/* <img
+        {/* 🌸 BOTTOM RIGHT */}
+        {/* <img
         src={img11}
         className="hidden sm:block absolute bottom-0 right-0 w-40 md:w-60 opacity-10 z-0"
         alt=""
       /> */}
-      {/* <img
+        {/* <img
        src={sideimg1}
         className="absolute bottom-0 left-0 w-60 opacity-100 bg-amber-300"
          alt=""
        /> */}
-       {/* <img
+        {/* <img
        src={img11}
         className="absolute bottom-0 right-0 w-60 opacity-100"
          alt=""
        /> */}
-       <img
-       src={Barati}
-        className="absolute bottom-0 right-0 w-90 opacity-100"
-         alt=""
-       />
-       {/* <img
+        <img
+          src={Barati}
+          className="absolute bottom-0 right-0 w-90 opacity-100"
+          alt=""
+        />
+        {/* <img
        src={Barati}
         className="absolute bottom-0 left-0 w-90 opacity-100 scale-x-[-1]"
          alt=""
        /> */}
 
-      {/* 🌸 SIDE DECOR (only desktop) */}
-      <img
-        src="https://pngimg.com/uploads/flowers/flowers_PNG102.png"
-        className="hidden md:block absolute bottom-10 left-10 w-40 opacity-60 z-0"
-        alt=""
-      />
+        {/* 🌸 SIDE DECOR (only desktop) */}
+        <img
+          src="https://pngimg.com/uploads/flowers/flowers_PNG102.png"
+          className="hidden md:block absolute bottom-10 left-10 w-40 opacity-60 z-0"
+          alt=""
+        />
 
-      {/* 🌸 EXTRA DECOR */}
-      <img
-        src="https://pngimg.com/uploads/flowers/flowers_PNG102.png"
-        className="hidden md:block absolute top-20 right-10 w-40 opacity-60 z-0"
-        alt=""
-      />
+        {/* 🌸 EXTRA DECOR */}
+        <img
+          src="https://pngimg.com/uploads/flowers/flowers_PNG102.png"
+          className="hidden md:block absolute top-20 right-10 w-40 opacity-60 z-0"
+          alt=""
+        />
 
-      {/* ✅ MAIN CONTENT */}
-      <div>
-      
-      <div className="min-h-screen flex items-center justify-center px-4 overflow-hidden relative">
-
-      {/* 🌸 Floating Petals */}
-      {/* {petals.map((petal, i) => (
+        {/* ✅ MAIN CONTENT */}
+        <div>
+          <div className="min-h-screen flex items-center justify-center px-4 overflow-hidden relative">
+            {/* 🌸 Floating Petals */}
+            {/* {petals.map((petal, i) => (
         <div
           key={i}
           className="absolute text-pink-400 opacity-60 animate-petal"
@@ -550,89 +534,88 @@ export default function WeddingLanding() {
           🌸
         </div>
       ))} */}
-      
 
-      <div className="text-center max-w-2xl relative z-10">
+            <div className="text-center max-w-2xl relative z-10">
+              {/* 🪔 Ganesha */}
+              <div className="flex justify-center">
+                <img
+                  src={Ganesha}
+                  className="w-24 sm:w-48 md:w-80 drop-shadow-lg"
+                  alt="Ganesha"
+                />
+              </div>
 
-        {/* 🪔 Ganesha */}
-        <div className="flex justify-center">
-          <img
-            src={Ganesha}
-            className="w-24 sm:w-48 md:w-80 drop-shadow-lg"
-            alt="Ganesha"
-          />
-        </div>
+              {/* Heading */}
+              <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif mt-4">
+                WEDDING INVITATION
+              </h1>
 
-        {/* Heading */}
-        <h1 className="text-2xl sm:text-4xl md:text-6xl text-rose-700 font-serif mt-4">
-          WEDDING INVITATION
-        </h1>
+              {/* 💖 Bride */}
+              <p className="mt-6 text-lg sm:text-xl md:text-3xl font-medium text-red-800 glow-text">
+                {brideText}
+                <span className="animate-pulse">|</span>
+              </p>
 
-        {/* 💖 Bride */}
-        <p className="mt-6 text-lg sm:text-xl md:text-3xl font-medium text-red-800 glow-text">
-          {brideText}
-          <span className="animate-pulse">|</span>
-        </p>
+              {/* & */}
+              <p className="text-xl sm:text-2xl text-rose-500 my-2">&</p>
 
-        {/* & */}
-        <p className="text-xl sm:text-2xl text-rose-500 my-2">&</p>
+              {/* 🤵 Groom */}
+              <p className="text-lg sm:text-xl md:text-3xl font-medium text-red-800 glow-text">
+                {groomText}
+                <span className="animate-pulse">|</span>
+              </p>
 
-        {/* 🤵 Groom */}
-        <p className="text-lg sm:text-xl md:text-3xl font-medium text-red-800 glow-text">
-          {groomText}
-          <span className="animate-pulse">|</span>
-        </p>
+              {/* Date */}
+              <p className="mt-6 text-2xl sm:text-3xl md:text-4xl text-rose-600 font-serif">
+                13 May 2026
+              </p>
 
-        {/* Date */}
-        <p className="mt-6 text-2xl sm:text-3xl md:text-4xl text-rose-600 font-serif">
-          13 May 2026
-        </p>
+              {/* Description */}
+              <p className="mt-4 text-gray-600">
+                Together with their families, invite you to celebrate their
+                union.
+              </p>
 
-        {/* Description */}
-        <p className="mt-4 text-gray-600">
-          Together with their families, invite you to celebrate their union.
-        </p>
-
-        {/* Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
-
-          <button
-            onClick={() =>
-              document.getElementById("events")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="
+              {/* Buttons */}
+              <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("events")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="
               px-8 py-3 rounded-full
               bg-gradient-to-r from-pink-800 to-pink-400
               text-white shadow-lg
               hover:scale-105 transition
             "
-          >
-            View Events
-          </button>
+                >
+                  View Events
+                </button>
 
-          <button
-            onClick={() =>
-              document.getElementById("rsvp")
-                .scrollIntoView({ behavior: "smooth" })
-            }
-            className="
+                <button
+                  onClick={() =>
+                    document
+                      .getElementById("rsvp")
+                      .scrollIntoView({ behavior: "smooth" })
+                  }
+                  className="
               px-8 py-3 rounded-full
               bg-white/20 backdrop-blur-md
               border border-pink-400
               text-pink-500
               hover:scale-105 transition
             "
-          >
-            RSVP Now
-          </button>
+                >
+                  RSVP Now
+                </button>
+              </div>
+            </div>
 
-        </div>
-      </div>
-
-      {/* ✨ Styles */}
-      <style>
-        {`
+            {/* ✨ Styles */}
+            {/* <style>
+              {`
           .glow-text {
             text-shadow: 0 0 8px rgba(255, 105, 180, 0.6),
                          0 0 15px rgba(255, 105, 180, 0.4);
@@ -654,11 +637,41 @@ export default function WeddingLanding() {
             animation: petalFall linear infinite;
           }
         `}
+            </style> */}
+            {/* ✨ STYLES */}
+      <style>
+        {`
+          .glow-text {
+            text-shadow: 0 0 8px rgba(255, 105, 180, 0.6),
+                         0 0 15px rgba(255, 105, 180, 0.4);
+          }
+
+          @keyframes petalFall {
+            0% {
+              transform: translateY(-50vh);
+              opacity: 0;
+            }
+            5% {
+              opacity: 1;
+            }
+            50% {
+              transform: translateY(50vh) translateX(30px);
+            }
+            100% {
+              transform: translateY(110vh) translateX(-30px);
+              opacity: 0.8;
+            }
+          }
+
+          .animate-petal {
+            animation: petalFall linear infinite;
+            will-change: transform, opacity;
+          }
+        `}
       </style>
-    </div>
-      
+          </div>
+        </div>
       </div>
-    </div>
     </>
   );
 }
@@ -688,7 +701,6 @@ export default function WeddingLanding() {
 //             `url(${ugadi})`,
 //         }}
 //       />
-      
 
 //       {/* 🌼 HANGING EXTRA (center pieces) */}
 //       <img
