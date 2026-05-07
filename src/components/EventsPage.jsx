@@ -119,7 +119,8 @@ gradient.addColorStop(0.5, "#ffffff"); // white
 ctx.fillStyle = gradient;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    // ✨ Text
+
+    // ✨ Text//
     ctx.fillStyle = "#ec4899";
     ctx.font = "bold 24px sans-serif";
     ctx.textAlign = "center";
