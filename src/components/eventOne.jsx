@@ -535,9 +535,10 @@ export default function WeddingLanding() {
         </div>
       ))} */}
 
-            <div className="text-center max-w-2xl relative z-10">
+            <div className="text-center max-w-3xl relative z-10">
               {/* 🪔 Ganesha */}
-              <div className="flex justify-center">
+              <div className="flex flex-col items-center">
+                <p className="text-red-800 text-sm pb-2">|| ॐ श्री गणेशाय नमः || </p>
                 <img
                   src={Ganesha}
                   className="w-24 sm:w-48 md:w-80 drop-shadow-lg"

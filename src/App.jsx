@@ -14,6 +14,8 @@ import WeddingFooter from './components/Footer'
 import RSVPSection from './components/RSVP_Form'
 import MusicPlayer from './components/MusicPlayer'
 
+import DoorWrapper from "./components/DoorWrapper";
+
 
 function App() {
   const [count, setCount] = useState(0)
