@@ -71,6 +71,8 @@
 
 import React, { useRef, useEffect, useState } from "react";
 
+
+
 const events = [
   {
     title: "पूजा एवं मटकोर",
@@ -219,6 +221,7 @@ export default function EventsPage() {
       </div>
 
       {/* Bottom Banner */}
+
       <div className="mt-16 w-full max-w-5xl rounded-3xl bg-gradient-to-r from-pink-800 to-pink-400 text-white text-center py-10 px-6 shadow-xl">
         <h2 className="text-2xl md:text-3xl font-serif mb-2">
           We Can't Wait To Celebrate With You!
